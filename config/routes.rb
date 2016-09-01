@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
   resources :contacts
   get '/about' => 'pages#about'
-  root to 'pages#home'
+  root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
