@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ayris</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Dev Match</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag "https://js.stripe.com/v2/", type: 'text/javascript' %>
+  <%= javascript_include_tag 'application' %>
   <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!--Header, the navbar, part -->
-  
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class='container'>
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
       <%= link_to root_path, class: 'navbar-brand' do %>
         <i class="fa fa-users"></i>
-        Dev Match
+        Ayris
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -46,11 +42,14 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
+  
 <div class="container">
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
+  
   <%= yield %>
 </div>
+  
 </body>
 </html>
