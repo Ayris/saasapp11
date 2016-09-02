@@ -37,5 +37,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.4'
 end
