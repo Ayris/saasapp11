@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   def home
-    @trial_plan = Plan.find_by id: '1'
-    @pro_plan = Plan.find_by id: '2'
+    if Plan.find_by name: 'trial'
+      @trial_plan = 1
+    end
+    if Plan.find_by name: 'pro'
+      @pro_plan = 2
+    end
   end
   
   def about
