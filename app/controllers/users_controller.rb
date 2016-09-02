@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_filter :authenticate_user!, except: [:new, :create]
   
   def index
     @users = User.includes(:profile)
