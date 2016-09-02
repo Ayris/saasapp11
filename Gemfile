@@ -67,4 +67,4 @@ gem 'stripe'
 # Use figaro to hide secret keys
 gem 'figaro'
 
-ruby '2.2.4'
+ruby '2.3.0'
