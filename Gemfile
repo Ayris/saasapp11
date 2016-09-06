@@ -67,4 +67,5 @@ gem 'stripe'
 # Use figaro to hide secret keys
 gem 'figaro'
 
-ruby '2.3.0'
+# Roo for uploading and parsing text files
+gem 'roo', '~> 2.4.0'

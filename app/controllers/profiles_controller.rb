@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_filter :authenticate_user!, except: [:new, :create]
+  before_action :authenticate_user!, except: [:new, :create]
   before_action :only_current_user
   
   def new
