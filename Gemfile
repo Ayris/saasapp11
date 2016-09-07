@@ -69,3 +69,5 @@ gem 'figaro'
 
 # Roo for uploading and parsing text files
 gem 'roo', '~> 2.4.0'
+
+ruby '2.3.0'

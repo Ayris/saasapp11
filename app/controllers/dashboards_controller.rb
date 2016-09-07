@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
   before_action :authenticate_user!, except: [:new, :create]
   before_action :only_current_user
+  require "roo"
   
   def userui
   end
